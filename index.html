@@ -1,123 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GhostNet Terms</title>
+<title>Nexora | NXSL Documentation</title>
 
 <style>
 body {
     margin: 0;
-    font-family: monospace;
-    background: #0b0b0b;
+    font-family: 'JetBrains Mono', monospace; /* Mantendo a identidade da Nexora */
+    background: #050505;
     color: #e5e5e5;
 }
 
-/* botão voltar discreto */
 .back-btn {
     position: fixed;
     top: 12px;
-    right: 12px;
-    background: #1f1f1f;
-    color: #fff;
-    border: 1px solid #333;
-    padding: 8px 12px;
-    border-radius: 8px;
+    left: 12px;
+    background: #111;
+    color: #00f2ff;
+    border: 1px solid #00f2ff;
+    padding: 8px 16px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .back-btn:hover {
-    background: #2a2a2a;
+    background: #00f2ff;
+    color: #000;
 }
 
 .container {
     max-width: 800px;
     margin: 80px auto;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 h1 {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #00f2ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .section {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #222;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #111;
 }
 
 .title {
+    color: #00f2ff;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+code {
+    background: #111;
+    padding: 2px 6px;
+    border-radius: 4px;
     color: #7dd3fc;
-    margin-bottom: 8px;
+}
+
+.warning {
+    color: #ff4444;
 }
 </style>
 </head>
 
 <body>
 
-<button class="back-btn" onclick="goBack()">⬅ Voltar</button>
+<button class="back-btn" onclick="goBack()">⬅ [BACK_TO_HUB]</button>
 
 <div class="container">
 
-<h1>GhostNet – Terms & System Information</h1>
+<h1>NEXUS SECURE LICENSE (NXSL) v1.0</h1>
 
 <div class="section">
-    <div class="title">licensing </div>
+    <div class="title">01. Overview</div>
     <p>
-        
-
-  </p>
-</div>
-
-<div class="section">
-    <div class="title">NXSL</div>
-    <p>
-
-
-Mandatory Attribution: Uma cópia acessível desta licença deve ser mantida no diretório raiz e o cabeçalho de atribuição deve permanecer intacto no topo de cada arquivo.
-Network Persistence (AGPL Style): Se o software interagir com usuários via rede (APIs/Web), as modificações no código-fonte devem ser disponibilizadas publicamente sob esta mesma licença.
-
-Viral Clause: Todo trabalho derivado deve, obrigatoriamente, ser redistribuído sob a NXSL v1.0.
-
-Proprietary Authorization: O uso em ambientes de código fechado ou comercial requer autorização formal prévia do responsável pelo código original utilizado.
-
-Disclaimer of Warranty: O software é fornecido "como está" ("AS IS"), sem garantias de qualquer tipo. A Nexora.Inc não se responsabiliza por danos, falhas ou perdas decorrentes do uso do código.
-
-</p>
-</div>
-
-<div class="section">
-    <div class="title">interface </div>
-    <p>
-        This project is independent and does not belong to any company or use the functions of public browsers.
-     •Interface: inspired by Google's Chrome browser.
-     
+        A <strong>NXSL (Nexus Secure License)</strong> foi projetada para garantir que o desenvolvimento modular permaneça transparente e acessível, protegendo a autoria original e garantindo que melhorias na infraestrutura beneficiem toda a comunidade.
     </p>
 </div>
 
 <div class="section">
-    <div class="title">sites</div>
+    <div class="title">02. Core Requirements</div>
+    <ul>
+        <li><strong>Mandatory Attribution:</strong> Uma cópia acessível desta licença deve ser mantida no diretório raiz e o cabeçalho de atribuição deve permanecer intacto no topo de cada arquivo.</li>
+        <li><strong>Network Persistence:</strong> Se o software interagir com usuários via rede (APIs/Web), as modificações no código-fonte devem ser disponibilizadas publicamente sob a NXSL.</li>
+        <li><strong>Viral Clause:</strong> Todo trabalho derivado deve, obrigatoriamente, ser redistribuído sob a versão v1.0 desta licença.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <div class="title">03. Proprietary & Commercial Use</div>
     <p>
-        We are not responsible for user usage and will not directly or aggressively intervene in browser usage.
+        O uso em ambientes de código fechado ou projetos comerciais é estritamente proibido sem autorização prévia. Desenvolvedores interessados devem entrar em contato com os <strong>Desenvolvedores originais</strong> para obter uma permissão formal por escrito.
     </p>
 </div>
 
 <div class="section">
-    <div class="title">limits</div>
-    <p>
-        This browser is directly associated with GhostOS (an operating system running on top of Android with a capacitor for translating HTML and JavaScript for native interpretation).
-      This project was designed exclusively to run in the WebOS environment and may not work correctly with alternative projects that are used.
+    <div class="title">04. Disclaimer of Warranty</div>
+    <p class="warning">
+        O SOFTWARE É FORNECIDO "COMO ESTÁ" (AS IS), SEM GARANTIAS DE QUALQUER TIPO. A NEXORA.INC NÃO SE RESPONSABILIZA POR DANOS, FALHAS OU PERDAS DECORRENTES DO USO DESTE CÓDIGO. O USUÁRIO ASSUME TOTAL RESPONSABILIDADE PELA IMPLEMENTAÇÃO.
     </p>
+</div>
+
+<div class="section">
+    <div class="title">05. Implementation Example</div>
+    <p>Adicione este cabeçalho ao seu código para aplicar a licença:</p>
+    <pre style="background: #111; padding: 15px; border-radius: 8px; font-size: 13px; color: #aaa; border-left: 3px solid #00f2ff;">
+/* 
+ * Licensed under NEXUS SECURE LICENSE (NXSL) v1.0
+ * Terms: https://nexora-inc.github.io/license
+ * (c) 2026 Nexora.Inc
+ */</pre>
 </div>
 
 </div>
 
 <script>
 function goBack() {
-    window.location.href = "ghostnet.html";
+    window.location.href = "index.html";
 }
 </script>
 
