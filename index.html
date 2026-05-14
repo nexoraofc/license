@@ -8,7 +8,7 @@
 <style>
 body {
     margin: 0;
-    font-family: 'JetBrains Mono', monospace; /* Mantendo a identidade da Nexora */
+    font-family: 'JetBrains Mono', monospace;
     background: #050505;
     color: #e5e5e5;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 80px auto;
     padding: 20px;
     line-height: 1.8;
@@ -46,6 +46,8 @@ h1 {
     color: #00f2ff;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border-left: 4px solid #00f2ff;
+    padding-left: 15px;
 }
 
 .section {
@@ -60,17 +62,50 @@ h1 {
     margin-bottom: 12px;
     text-transform: uppercase;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
-code {
-    background: #111;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #7dd3fc;
+.title::before {
+    content: "> ";
+    margin-right: 8px;
+    opacity: 0.6;
 }
 
-.warning {
+.clause {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.clause strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+pre {
+    background: #0a0a0a;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #aaa;
+    border: 1px solid #222;
+    overflow-x: auto;
+}
+
+.warning-box {
+    background: rgba(255, 68, 68, 0.05);
+    border: 1px solid #ff4444;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.warning-title {
     color: #ff4444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 </style>
 </head>
@@ -84,43 +119,67 @@ code {
 <h1>NEXUS SECURE LICENSE (NXSL) v1.0</h1>
 
 <div class="section">
-    <div class="title">01. Overview</div>
+    <div class="title">01. Definições e Propósito</div>
     <p>
-        A <strong>NXSL (Nexus Secure License)</strong> foi projetada para garantir que o desenvolvimento modular permaneça transparente e acessível, protegendo a autoria original e garantindo que melhorias na infraestrutura beneficiem toda a comunidade.
+        A <strong>Nexus Secure License (NXSL)</strong> estabelece um framework de licenciamento para software modular, focando na preservação da autoria e na evolução colaborativa. O objetivo desta licença é garantir que o software permaneça auditável e que melhorias sejam compartilhadas com a comunidade original.
     </p>
 </div>
 
 <div class="section">
-    <div class="title">02. Core Requirements</div>
-    <ul>
-        <li><strong>Mandatory Attribution:</strong> Uma cópia acessível desta licença deve ser mantida no diretório raiz e o cabeçalho de atribuição deve permanecer intacto no topo de cada arquivo.</li>
-        <li><strong>Network Persistence:</strong> Se o software interagir com usuários via rede (APIs/Web), as modificações no código-fonte devem ser disponibilizadas publicamente sob a NXSL.</li>
-        <li><strong>Viral Clause:</strong> Todo trabalho derivado deve, obrigatoriamente, ser redistribuído sob a versão v1.0 desta licença.</li>
-    </ul>
+    <div class="title">02. Termos de Uso e Distribuição</div>
+    
+    <div class="clause">
+        <strong>2.1 Manutenção de Atribuição:</strong>
+        O Licenciado deve manter, de forma inalterada, todos os avisos de direitos autorais e o cabeçalho de identificação da NXSL em cada arquivo do código-fonte. Uma cópia integral desta licença (LICENSE.md) deve acompanhar qualquer distribuição do software.
+    </div>
+
+    <div class="clause">
+        <strong>2.2 Persistência de Rede (Network Clause):</strong>
+        Caso o software seja modificado e disponibilizado para interação através de rede (serviços web, APIs ou sistemas descentralizados), o Licenciado é obrigado a disponibilizar publicamente o código-fonte modificado sob os termos desta mesma licença.
+    </div>
+
+    <div class="clause">
+        <strong>2.3 Natureza Viral (Copyleft):</strong>
+        Trabalhos derivados, extensões ou integrações profundas baseadas em código sob NXSL devem ser obrigatoriamente licenciados sob a NXSL v1.0, impedindo a fragmentação proprietária do ecossistema.
+    </div>
 </div>
 
 <div class="section">
-    <div class="title">03. Proprietary & Commercial Use</div>
-    <p>
-        O uso em ambientes de código fechado ou projetos comerciais é estritamente proibido sem autorização prévia. Desenvolvedores interessados devem entrar em contato com os <strong>Desenvolvedores originais</strong> para obter uma permissão formal por escrito.
-    </p>
+    <div class="title">03. Restrições e Uso Proprietário</div>
+    
+    <div class="clause">
+        <strong>3.1 Vedação de Código Fechado:</strong>
+        É estritamente proibida a incorporação de software sob NXSL em projetos de código fechado (proprietary) ou para fins comerciais diretos sem uma licença comercial separada.
+    </div>
+
+    <div class="clause">
+        <strong>3.2 Autorização Formal:</strong>
+        Qualquer exceção aos termos desta licença requer autorização prévia, expressa e por escrito dos <strong>Desenvolvedores Originais (Licenciantes)</strong>. O silêncio não implica em permissão.
+    </div>
 </div>
 
 <div class="section">
-    <div class="title">04. Disclaimer of Warranty</div>
-    <p class="warning">
-        O SOFTWARE É FORNECIDO "COMO ESTÁ" (AS IS), SEM GARANTIAS DE QUALQUER TIPO. A NEXORA.INC NÃO SE RESPONSABILIZA POR DANOS, FALHAS OU PERDAS DECORRENTES DO USO DESTE CÓDIGO. O USUÁRIO ASSUME TOTAL RESPONSABILIDADE PELA IMPLEMENTAÇÃO.
-    </p>
+    <div class="title">04. Isenção de Garantia e Responsabilidade</div>
+    <div class="warning-box">
+        <div class="warning-title">Aviso Legal (Disclaimer)</div>
+        <p>
+            O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM QUALQUER TIPO DE GARANTIA, EXPRESSA OU IMPLÍCITA. EM NENHUMA HIPÓTESE A <strong>NEXORA.INC</strong> OU OS DESENVOLVEDORES ORIGINAIS SERÃO RESPONSABILIZADOS POR QUALQUER RECLAMAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, ATO ILÍCITO OU OUTRA FORMA, DECORRENTE DE OU EM CONEXÃO COM O SOFTWARE OU O USO DO MESMO.
+        </p>
+    </div>
 </div>
 
 <div class="section">
-    <div class="title">05. Implementation Example</div>
-    <p>Adicione este cabeçalho ao seu código para aplicar a licença:</p>
-    <pre style="background: #111; padding: 15px; border-radius: 8px; font-size: 13px; color: #aaa; border-left: 3px solid #00f2ff;">
-/* 
+    <div class="title">05. Guia de Implementação</div>
+    <p>Para conformidade imediata, insira o bloco abaixo no topo do seu código-fonte:</p>
+    <pre>
+/**
  * Licensed under NEXUS SECURE LICENSE (NXSL) v1.0
- * Terms: https://nexora-inc.github.io/license
- * (c) 2026 Nexora.Inc
+ * --------------------------------------------------------
+ * 1. Mandatory attribution and license copy retention.
+ * 2. Network-based interactions require source disclosure.
+ * 3. NO WARRANTY: Software provided "AS IS".
+ * 4. Commercial use requires prior formal authorization.
+ * Full Terms: https://nexora-inc.github.io/license
  */</pre>
 </div>
 
